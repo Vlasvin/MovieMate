@@ -7,10 +7,9 @@ import { useParams,useSearchParams } from 'react-router-dom';
 import { fetchSearch } from 'Services/api';
 
 const Movies = () => {
-  const [value, setValue] = useState('');
   const [movies, setMovies] = useState([]);
   const { movieId } = useParams();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const query = searchParams.get('query') || '';
 
 
@@ -19,8 +18,8 @@ const Movies = () => {
   }, [movieId]);
 
   const handleSubmit = value => {
-    setValue(value);
   };
+  
   useEffect(() => {
     if (query) {
       fetchSearch(query).then(movies => {

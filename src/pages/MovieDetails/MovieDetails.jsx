@@ -2,6 +2,7 @@ import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import {
+  Style,
   MovieImg,
   MovieName,
   UserScore,
@@ -50,13 +51,13 @@ const MovieDetails = () => {
   return (
     <main>
       {movie && (
-        <>
+        <Style>
           <Link to={backLink} style={{ textDecoration: 'none' }}>
             <GoBackBtn type="button">
               <AiOutlineArrowLeft />
               Go back
             </GoBackBtn>
-          </Link>
+          </Link> 
           <Movie>
             <MovieImg
               src={
@@ -91,7 +92,7 @@ const MovieDetails = () => {
             </InfoItem>
           </InfoList>
           <Outlet/>
-        </>
+        </Style>
       )}
     </main>
   );

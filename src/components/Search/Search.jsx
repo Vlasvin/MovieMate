@@ -8,6 +8,7 @@ export const Search = ({ onSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    console.log(searchParams);
     setSearchParams({ query: inputValue });
     if (inputValue.trim() === '') {
       return;

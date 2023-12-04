@@ -26,9 +26,13 @@ const Cast = () => {
         <CastList>
                 {movieCast.map(movie => {
             return (
-              <CastItem>
+              <CastItem key={movie.id}>
                 <CastImg
-                  src={movie.profile_path?`${baseUrl}${movie.profile_path}`:defaultImg}
+                  src={
+                    movie.profile_path
+                      ? `${baseUrl}${movie.profile_path}`
+                      : defaultImg
+                  }
                   alt=""
                 ></CastImg>
                 <CastName>{movie.name}</CastName>

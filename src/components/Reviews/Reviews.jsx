@@ -4,30 +4,37 @@ import { useEffect, useState } from "react";
 import { fetchReview } from "Services/api";
 
 const Reviews = () => {
-const { movieId } = useParams();
-const [movieCast, setMovieCast] = useState([]);
+  const { movieId } = useParams();
+  const [movieReview, setMovieReview] = useState([]);
 
-useEffect(() => {
-  if (movieId) {
-    fetchReview (movieId).then(movies => {
-      if (movies.cast.length > 0) {
-        setMovieCast(movies.cast);
-      }
-    });
-  }
-}, [movieId]);
+  useEffect(() => {
+    if (movieId) {
+      fetchReview(movieId).then(movies => {
+    if (movies.results && movies.results.length > 0) {
+          setMovieReview(movies.results);
+        }
+      });
+    }
+  }, [movieId]);
 
-
-    return (
-        <div>
-            <ReviewList>
-                <ReviewItem>
-                    <ReviewAuthor>Author:</ReviewAuthor>
-                    <ReviewText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati porro sapiente unde quidem maxime, illo nisi esse animi dolore saepe reprehenderit, inventore rerum corrupti? Quia facere accusamus necessitatibus quasi eius?</ReviewText>
-                </ReviewItem>
-            </ReviewList>
-        </div>
-    )
-}
+  return (
+    <div>
+      <ReviewList>
+              {movieReview.length > 0 ? (
+              movieReview.map(movie => (
+            <ReviewItem key={movie.id}>
+              <ReviewAuthor>Author: {movie.author}</ReviewAuthor>
+              <ReviewText>{movie.content}</ReviewText>
+            </ReviewItem>
+              ))) :
+                  (<ReviewItem key="no-reviews">
+            We don't have any reviews for this movie.
+          </ReviewItem>
+       
+        )}
+      </ReviewList>
+    </div>
+  );
+};
 
 export default Reviews;

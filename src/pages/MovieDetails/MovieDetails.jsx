@@ -1,6 +1,7 @@
 import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
+import { Suspense } from 'react';
 import {
   Style,
   MovieImg,
@@ -57,7 +58,7 @@ const MovieDetails = () => {
               <AiOutlineArrowLeft />
               Go back
             </GoBackBtn>
-          </Link> 
+          </Link>
           <Movie>
             <MovieImg
               src={
@@ -91,7 +92,9 @@ const MovieDetails = () => {
               <Link to="reviews">Reviews</Link>
             </InfoItem>
           </InfoList>
-          <Outlet/>
+          <Suspense fallback={<div>Loading page...</div>}>
+            <Outlet />
+          </Suspense>
         </Style>
       )}
     </main>

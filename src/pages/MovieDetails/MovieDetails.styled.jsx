@@ -23,6 +23,8 @@ export const UserScore = styled.p`
 export const Overview = styled.h3``;
 export const OverviewText = styled.p`
   font-size: 18px;
+  padding-right: 20px;
+  
 `;
 export const Genres = styled.h3`
   font-weight: bold;
@@ -48,6 +50,7 @@ export const MovieInfo = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+  margin-right: 20px;
 `;
 export const Movie = styled.div`
   display: flex;

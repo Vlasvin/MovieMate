@@ -4,7 +4,7 @@ export const ReviewList = styled.ul`
 max-width: 1440px;
 display: flex;
 gap: 20px;
-margin-right: 40px;
+margin-right: 40px;       
 flex-direction: column;
 
 `

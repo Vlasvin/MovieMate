@@ -1,7 +1,7 @@
-import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
+import { useParams, Link, useLocation, Outlet,  } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { Suspense } from 'react';
+import { Suspense,useRef } from 'react';
 import {
   Style,
   MovieImg,
@@ -27,7 +27,7 @@ const MovieDetails = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const location = useLocation();
-  const backLink = location.state?.from ?? '/';
+  const backLink = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,7 +53,7 @@ const MovieDetails = () => {
     <main>
       {movie && (
         <Style>
-          <Link to={backLink} style={{ textDecoration: 'none' }}>
+          <Link to={backLink.current} style={{ textDecoration: 'none' }}>
             <GoBackBtn type="button">
               <AiOutlineArrowLeft />
               Go back

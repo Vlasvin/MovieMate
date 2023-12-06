@@ -1,5 +1,5 @@
 import { CastImg, CastItem, CastList, CastName, Character } from "./Cast.styled"
-import { useParams } from "react-router-dom";
+import { useParams,useLocation } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { fetchCast } from "Services/api";
 
@@ -10,6 +10,7 @@ const defaultImg =
 const Cast = () => {
     const { movieId } = useParams();
     const [movieCast, setMovieCast] = useState([]);
+    const location = useLocation()
 
     useEffect(() => {
       if (movieId) {

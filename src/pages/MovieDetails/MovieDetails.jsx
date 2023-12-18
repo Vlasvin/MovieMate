@@ -47,7 +47,7 @@ const MovieDetails = () => {
   }, [movieId]);
 
   const defaultImg =
-    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/images=1000x700';
+    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/images=1000x700';   
 
   return (
     <main>
@@ -102,3 +102,4 @@ const MovieDetails = () => {
 };
 
 export default MovieDetails;
+ 

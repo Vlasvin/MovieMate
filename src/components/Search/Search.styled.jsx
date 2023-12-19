@@ -4,7 +4,10 @@ export const SearchForm = styled.form`
   display: flex;
   gap: 14px;
   margin-bottom: 20px;
+  justify-content: center;
+  flex-direction: row;
 `;
+
 export const SearchFormInput = styled.input`
   display: inline-block;
   width: 500px;

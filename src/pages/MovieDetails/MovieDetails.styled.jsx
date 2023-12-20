@@ -5,6 +5,7 @@ export const Style = styled.div`
   flex-direction: column;
   border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(117, 115, 115, 0.5);
   border-radius: 8px;
 
   @media (max-width: 1440px) {
@@ -19,6 +20,7 @@ export const GoBackBtn = styled.button`
   margin-bottom: 20px;
   margin-left: 20px;
   margin-top: 20px;
+  border-radius: 8px;
 
   @media (max-width: 1440px) {
     margin-left: 40px;

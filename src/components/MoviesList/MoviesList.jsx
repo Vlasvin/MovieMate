@@ -21,15 +21,16 @@ const MoviesList = ({ movies }) => {
           return (
             <MovieItem key={movie.id}>
               <Link to={`${movie.id}`} state={{ from: location }}>
-                <MovieListImg
-                  src={
-                    movie.poster_path
-                      ? `${baseUrl}${movie.poster_path}`
-                      : defaultImg
-                  }
-                  alt={`Poster for ${name}`}
-                />
                 <MovieOverlay>
+                  <MovieListImg
+                    src={
+                      movie.poster_path
+                        ? `${baseUrl}${movie.poster_path}`
+                        : defaultImg
+                    }
+                    alt={`Poster for ${name}`}
+                  />
+
                   <MovieName> {name}</MovieName>
                 </MovieOverlay>
               </Link>
@@ -39,15 +40,16 @@ const MoviesList = ({ movies }) => {
           return (
             <MovieItem key={movie.id}>
               <Link to={`movies/${movie.id}`} state={{ from: location }}>
-                <MovieListImg
-                  src={
-                    movie.poster_path
-                      ? `${baseUrl}${movie.poster_path}`
-                      : defaultImg
-                  }
-                  alt={`Poster for ${name}`}
-                />
                 <MovieOverlay>
+                  <MovieListImg
+                    src={
+                      movie.poster_path
+                        ? `${baseUrl}${movie.poster_path}`
+                        : defaultImg
+                    }
+                    alt={`Poster for ${name}`}
+                  />
+
                   <MovieName> {name} </MovieName>
                 </MovieOverlay>
               </Link>

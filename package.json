@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-05-movies",
+  "name": "movie-mate",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vlasvin.github.io/goit-react-hw-05-movies/",
+  "homepage": "https://github.com/Vlasvin/MovieMate",
   "dependencies": {
     "@redux-devtools/extension": "^3.2.6",
     "@testing-library/jest-dom": "^5.16.3",

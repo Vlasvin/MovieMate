@@ -16,6 +16,7 @@ export const ReviewItem = styled.li`
   border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  padding: 8px;
 `;
 export const ReviewAuthor = styled.h4`
 text-align:center`

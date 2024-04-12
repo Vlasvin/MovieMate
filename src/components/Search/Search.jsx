@@ -1,6 +1,7 @@
-import { SearchForm, SearchFormInput, SearchBtn } from './Search.styled';
 import { useSearchParams } from 'react-router-dom';
 import { useState } from 'react';
+
+import { SearchForm, SearchFormInput, SearchBtn } from './styled';
 
 export const Search = ({ onSubmit }) => {
   const [searchParams, setSearchParams] = useSearchParams();

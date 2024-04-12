@@ -1,7 +1,9 @@
-import { useParams, Link, useLocation, Outlet,  } from 'react-router-dom';
+import { useParams, Link, useLocation, Outlet } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { Suspense,useRef } from 'react';
+import { Suspense, useRef } from 'react';
+import { fetchMovieDetails } from 'Services/api';
+
 import {
   Style,
   MovieImg,
@@ -18,8 +20,7 @@ import {
   MovieInfo,
   GenresStyles,
   InfoItem,
-} from './MovieDetails.styled';
-import { fetchMovieDetails } from 'Services/api';
+} from './styled';
 
 const baseUrl = 'https://image.tmdb.org/t/p/w300';
 
@@ -47,7 +48,7 @@ const MovieDetails = () => {
   }, [movieId]);
 
   const defaultImg =
-    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/images=1000x700';   
+    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/images=1000x700';
 
   return (
     <main>
@@ -102,4 +103,3 @@ const MovieDetails = () => {
 };
 
 export default MovieDetails;
- 

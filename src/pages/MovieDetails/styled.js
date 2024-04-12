@@ -92,6 +92,7 @@ export const InfoItem = styled.li`
 export const MovieInfo = styled.div`
   display: flex;
   flex-direction: column;
+  max-width: 860px;
   margin-left: 20px;
   margin-right: 20px;
 `;

@@ -1,11 +1,12 @@
+import { Link, useLocation } from 'react-router-dom';
+
 import {
   MovieList,
   MovieItem,
   MovieListImg,
   MovieName,
   MovieOverlay,
-} from './MoviesList.styled';
-import { Link, useLocation } from 'react-router-dom';
+} from './styled';
 
 const MoviesList = ({ movies }) => {
   const location = useLocation();

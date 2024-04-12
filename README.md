@@ -1,4 +1,4 @@
-# Contacts Book
+# Movie Mate
 
 The "Movie Mate" is a movie search app.
 
